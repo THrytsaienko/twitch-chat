@@ -45,8 +45,8 @@ const TwitchIcon = styled(Twitch)`
       margin-right: 7px;
 `;
 
-const clientId = "o7hx4ouu9dcuuui6k8xc9gt073epbg";
-const registeredURI = "http://localhost:3000";
+const clientId = process.env.REACT_APP_CLIENT_ID;
+const registeredURI = process.env.REACT_APP_REGISTERED_URI;
 const responseType = "token";
 const scope = "chat:read chat:edit";
 const redirectUrl = `https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&redirect_uri=${registeredURI}&response_type=${responseType}&scope=${scope}`;
